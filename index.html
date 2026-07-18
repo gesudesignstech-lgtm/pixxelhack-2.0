@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIXXELHACK 2.0 // 48-Hour Webathon by TCET ACM SIGITE</title>
+    <meta name="description" content="Design, develop, and deploy functional web applications in a 48-hour high-intensity college webathon. Organize teams, innovate, and conquer.">
+    <!-- Google Fonts: Syne and DM Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Mouse follow glowing element -->
+    <div id="mouse-glow" aria-hidden="true"></div>
+
+    <!-- Intro Preloader -->
+    <div id="preloader" role="dialog" aria-modal="true" aria-label="System Initializing">
+        <div class="preloader-content">
+            <div class="preloader-terminal">
+                <p class="term-line">&gt; INITIALIZING SECURE PROTOCOL...</p>
+                <p class="term-line">&gt; DECRYPTING PIXXLEHACK_SYS_2.0... OK</p>
+                <p class="term-line">&gt; DETECTING CREATIVE COGNITION... UNLIMITED IDEAS FOUND</p>
+                <p class="term-line">&gt; READY TO LAUNCH_</p>
+            </div>
+            <div class="preloader-progress-wrap">
+                <div class="glitch-title" data-text="PIXXELHACK 2.0">PIXXELHACK 2.0</div>
+                <div class="preloader-bar-bg">
+                    <div class="preloader-bar" id="load-bar"></div>
+                </div>
+                <div class="preloader-percentage"><span id="load-pct">00</span>%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scan lines overlay -->
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+    <div class="header-container">
+        <!-- TCET logo: far left -->
+        <a href="https://tcetmumbai.in/" class="institution-logo tcet-logo" aria-label="TCET Home">
+            <img src="TCET Logo.png" alt="TCET logo">
+        </a>
+
+        <!-- PixxleHack logo -->
+        <a href="#" class="logo-link" aria-label="Pixxlehack 2.0 Home">
+            <span class="logo-txt">PIXXELHACK</span>
+            <span class="logo-badge">2.0</span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main Navigation">
+            <ul class="nav-list">
+                <li><a href="#about" class="nav-link">ABOUT</a></li>
+                <li><a href="#tracks" class="nav-link">TRACKS</a></li>
+                <li><a href="#timeline" class="nav-link">TIMELINE</a></li>
+                <li><a href="#control" class="nav-link">MISSION</a></li>
+            </ul>
+        </nav>
+
+        <!-- ACM logo: far right -->
+        <a href="https://www.acm.org/" class="institution-logo acm-logo" aria-label="ACM Home">
+            <img src="acm logo.png" alt="ACM logo">
+        </a>
+
+        <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu"
+            aria-expanded="false" aria-controls="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </div>
+</header>
+
+    <!-- Main Container -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-grid-bg" aria-hidden="true"></div>
+            <div class="hero-container">
+                <!-- Left Side: Dynamic Technical Typography -->
+                <div class="hero-content reveal-on-scroll">
+                    <div class="top-tagline">
+                        <span class="tag-symbol">//</span> TCET ACM SIGITE PRESENTS // WEBATHON 2.0
+                    </div>
+                    
+                    <h1 class="hero-headline">
+                        CODE.<br>
+                        INNOVATE.<br>
+                        CONQUER.
+                    </h1>
+
+                    <div class="warning-ticker-wrap">
+                        <div class="warning-ticker">
+                            <span class="ticker-warn">WARNING:</span> UNLIMITED IDEAS DETECTED ✦ 48-HOUR CRITICAL THRESHOLD ✦ CODE PIXEL BY PIXEL ✦ &nbsp;
+                        </div>
+                    </div>
+
+                    <div class="hero-meta">
+                        <div class="tech-spec">
+                            <span class="spec-label">MODE:</span> <span class="spec-value text-glowing">ONLINE</span>
+                        </div>
+                        <div class="tech-spec">
+                            <span class="spec-label">DATE:</span> <span class="spec-value">2ND AUGUST</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-btn-container">
+    <a href="#register" class="hero-ticker-btn" aria-label="Join the Hackathon">
+        <div class="btn-ticker-track">
+            <div class="btn-ticker-content">
+                <img src="unstop-logo.png" alt="Unstop" class="ticker-logo-img"> ✦ POWERED BY UNSTOP ✦ CLAIM NOW ✦ POWERED BY UNSTOP ✦ &nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="unstop-logo.png" alt="Unstop" class="ticker-logo-img"> ✦ POWERED BY UNSTOP ✦ CLAIM NOW ✦ POWERED BY UNSTOP ✦ &nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="btn-ticker-content" aria-hidden="true">
+                <img src="unstop-logo.png" alt="Unstop" class="ticker-logo-img"> ✦ POWERED BY UNSTOP ✦ CLAIM NOW ✦ POWERED BY UNSTOP ✦ &nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="unstop-logo.png" alt="Unstop" class="ticker-logo-img"> ✦ POWERED BY UNSTOP ✦ CLAIM NOW ✦ POWERED BY UNSTOP ✦ &nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+        <span class="ticker-btn-arrow" aria-hidden="true">➔</span>
+    </a>
+</div>
+                <!-- Right Side: 3D Parallax Poster -->
+              <!-- Right Side: 3D Parallax Poster -->
+<div class="hero-visual reveal-on-scroll">
+    <div class="poster-card" id="parallax-card">
+        <div class="poster-glitch-overlay" aria-hidden="true"></div>
+        <div class="poster-inner">
+            <img src="poster.png" alt="PixxleHack 2.0 Poster" class="poster-img">
+
+            <!-- Overlay floating visual graphics -->
+            <div class="poster-overlay-grid" aria-hidden="true"></div>
+            
+            <!-- Technical HUD Frame Elements -->
+            <div class="hud-box top-left">PH_2.0_INIT</div>
+            <div class="hud-box bottom-right">TCET_ACM_SIGITE</div>
+            <div class="hud-ring-outer" aria-hidden="true"></div>
+            <div class="hud-ring-inner" aria-hidden="true"></div>
+            
+            <!-- floating binary code -->
+            <div class="floating-binary" aria-hidden="true">
+                01100011 01101111 01100100 01100101
+            </div>
+        </div>
+    </div>
+</div>
+        </section>
+
+        <!-- Horizontal Marquee Banner -->
+        <section class="marquee-section" aria-hidden="true">
+            <div class="marquee-track">
+                <div class="marquee-content">
+                    DESIGN ✦ CODE ✦ DEPLOY ✦ COLLABORATE &nbsp;&nbsp;&nbsp;&nbsp; DESIGN ✦ CODE ✦ DEPLOY ✦ COLLABORATE &nbsp;&nbsp;&nbsp;&nbsp; DESIGN ✦ CODE ✦ DEPLOY ✦ COLLABORATE &nbsp;&nbsp;&nbsp;&nbsp; DESIGN ✦ CODE ✦ DEPLOY ✦ COLLABORATE &nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+                <div class="marquee-content" aria-hidden="true">
+                    DESIGN ✦ CODE ✦ DEPLOY ✦ COLLABORATE &nbsp;&nbsp;&nbsp;&nbsp; DESIGN ✦ CODE ✦ DEPLOY ✦ COLLABORATE &nbsp;&nbsp;&nbsp;&nbsp; DESIGN ✦ CODE ✦ DEPLOY ✦ COLLABORATE &nbsp;&nbsp;&nbsp;&nbsp; DESIGN ✦ CODE ✦ DEPLOY ✦ COLLABORATE &nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-container">
+                <div class="about-grid">
+                    <div class="about-text-content reveal-on-scroll">
+                        <span class="section-badge">// 01. INTRODUCING THE MISSION</span>
+                        <h3 class="section-heading">FROM SCREEN to REALITY .</h3>
+                        <p class="about-paragraph">
+                            PixxelHack 2.0 is a 48-hour online webathon hosted by TCET ACM SIGITE, bringing together passionate developers, designers, and innovators to solve real-world challenges through technology. Collaborate with like-minded peers, transform creative ideas into impactful web solutions, and push the boundaries of innovation.
+                            </p>
+                        <p class="about-paragraph">
+                            Whether you're a beginner or an experienced creator, PixxelHack 2.0 is your opportunity to learn, build, and compete in a dynamic environment. Showcase your technical and problem-solving skills, gain valuable experience, and turn your ideas into reality—where every pixel counts. 🚀
+                            </p>
+                    </div>
+
+                    <!-- Interactive Animated Stats Counters -->
+                    <div class="about-stats-panel reveal-on-scroll">
+                        <div class="stat-card">
+                            <div class="stat-value"><span class="counter-num" data-target="48">0</span>H</div>
+                            <div class="stat-label">// DURATION // 24 HRS PER ROUND </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value"><span class="counter-num" data-target="2">0</span>X</div>
+                            <div class="stat-label">// MAX MEMBERS // TEAM MODE</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">∞</div>
+                            <div class="stat-label">// IDEA THRESHOLD // UNRESTRICTED</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tracks Section -->
+        <section id="tracks" class="tracks-section">
+            <div class="section-container">
+                <div class="section-header reveal-on-scroll">
+                    <span class="section-badge">// 02. HACKING FOCUSES</span>
+                    <h2 class="section-heading">CHOOSE YOUR PROTOCOL</h2>
+                </div>
+
+                <div class="tracks-grid">
+                    <!-- Track Card 1 -->
+                    <div class="track-card reveal-on-scroll">
+                        <div class="track-card-decor"></div>
+                        <div class="track-card-content">
+                            <div class="track-icon">01</div>
+                            <h3 class="track-title">Reimagine the Everyday</h3>
+                            <p class="track-desc">
+                                Re-engineer existing daily processes, tools, or applications that feel outdated. Introduce modern mechanics, smart UI shortcuts, and automated workflows to make the mundane exciting.
+                            </p>
+                            <span class="track-arrow">➔</span>
+                        </div>
+                    </div>
+
+                    <!-- Track Card 2 -->
+                    <div class="track-card reveal-on-scroll">
+                        <div class="track-card-decor"></div>
+                        <div class="track-card-content">
+                            <div class="track-icon">02</div>
+                            <h3 class="track-title">Tech for Good</h3>
+                            <p class="track-desc">
+                                Create real-world, high-impact products targeting pressing community issues, environmental struggles, education deficiencies, mental health challenges, or local economic systems.
+                            </p>
+                            <span class="track-arrow">➔</span>
+                        </div>
+                    </div>
+
+                    <!-- Track Card 3 -->
+                    <div class="track-card reveal-on-scroll">
+                        <div class="track-card-decor"></div>
+                        <div class="track-card-content">
+                            <div class="track-icon">03</div>
+                            <h3 class="track-title">Wild Card</h3>
+                            <p class="track-desc">
+                                No rules, no limits. Bring your most experimental thoughts to life. Leverage AI APIs, interactive Canvas animations, 3D web features, or unconventional interactions to wow the jury.
+                            </p>
+                            <span class="track-arrow">➔</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="timeline-section">
+            <div class="section-container">
+                <div class="section-header reveal-on-scroll">
+                    <span class="section-badge">// 03. CHRONOGRAM</span>
+                    <h2 class="section-heading">THE 48-HOUR PIPELINE</h2>
+                </div>
+
+                <!-- Horizontal Desktop / Vertical Mobile Timeline Container -->
+                <div class="timeline-wrapper reveal-on-scroll">
+                    <div class="timeline-progress-line" id="timeline-indicator" aria-hidden="true"></div>
+                    
+                    <div class="timeline-grid">
+                        <!-- Timeline Step 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-node">
+                                <div class="node-dot"></div>
+                            </div>
+                            <div class="timeline-card">
+                                <div class="timeline-time">2ND AUGUST - 3RD AUGUST</div>
+                                <h3 class="timeline-title">IDEATION & PROPOSAL </h3>
+                                <p class="timeline-desc">
+                                    Pitch your innovative idea by submitting a detailed proposal that defines the problem, your approach, and the proposed solution.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Step 2 -->
+                        <div class="timeline-item">
+                            <div class="timeline-node">
+                                <div class="node-dot"></div>
+                            </div>
+                            <div class="timeline-card">
+                                <div class="timeline-time">7th AUGUST - 8TH AUGUST</div>
+                                <h3 class="timeline-title">DEVELOPMENT SPRINT</h3>
+                                <p class="timeline-desc">
+                                    Bring your concept to life by developing a functinal web solution. Collabrate,innovate,and present your final product to the judges.
+                           </p> </div>
+                        </div>
+
+                        <!-- Timeline Step 3 -->
+                        <div class="timeline-item">
+                            <div class="timeline-node">
+                                <div class="node-dot"></div>
+                            </div>
+                            <div class="timeline-card">
+                                <div class="timeline-time">10TH AUGUST</div>
+                                <h3 class="timeline-title">RESULT  DECLARATION</h3>
+                                <p class="timeline-desc">
+                                   The best solutions will be recognized with Cash Prize,Certificate and the tittle of Pixxelhack 2.0 Champions
+                                   </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bold Manifesto Section -->
+        <section class="manifesto-section">
+            <div class="manifesto-marquee-bg outline-text" aria-hidden="true">
+                <div class="manifesto-marquee-track left-to-right">
+                    <span>MAKE WAVES ✦ MAKE WAVES ✦ MAKE WAVES ✦ MAKE WAVES ✦ &nbsp;</span>
+                    <span>MAKE WAVES ✦ MAKE WAVES ✦ MAKE WAVES ✦ MAKE WAVES ✦ &nbsp;</span>
+                </div>
+                <div class="manifesto-marquee-track right-to-left">
+                    <span>CODE THE FUTURE ✦ CODE THE FUTURE ✦ CODE THE FUTURE ✦ &nbsp;</span>
+                    <span>CODE THE FUTURE ✦ CODE THE FUTURE ✦ CODE THE FUTURE ✦ &nbsp;</span>
+                </div>
+            </div>
+            <div class="section-container">
+                <div class="manifesto-content reveal-on-scroll">
+                    <p class="manifesto-sub">// REBEL DEVELOPMENT</p>
+                    <blockquote class="manifesto-quote">
+                        “YOU DON’T NEED PERMISSION TO MAKE WAVES.”
+                    </blockquote>
+                    <p class="manifesto-author">// THE WEBATHON PRINCIPLE</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Control Countdown Section -->
+        <section id="control" class="mission-control-section">
+            <!-- Animated Outline Typography in Background -->
+            <div class="mission-outline-bg outline-text" aria-hidden="true">
+                48 HOURS SYSTEM_LAUNCHED 48 HOURS SYSTEM_LAUNCHED
+            </div>
+            
+            <div class="section-container">
+                <div class="control-panel reveal-on-scroll">
+                    <div class="control-header">
+                        <span class="control-status-dot green"></span>
+                        <span class="control-title-txt">TERMINAL://MISSION_CONTROL</span>
+                        <span class="control-badge">READY_FOR_LAUNCH</span>
+                    </div>
+                    
+                    <div class="countdown-grid">
+                        <div class="countdown-wrap">
+                            <!-- Mega Countdown Timer -->
+                            <div class="countdown-display" id="timer-display" aria-live="polite">
+                                48:00:00
+                            </div>
+                            <p class="countdown-sub">// CLOCK COUNTDOWN INITIATED ON INITIAL BOOT</p>
+                        </div>
+                        
+                        <!-- Terminal Log Outputs -->
+                        <div class="terminal-logs">
+                            <div class="log-heading">&gt; SYSTEM_LOGS:</div>
+                            <div class="log-screen" id="log-screen">
+                                <div class="log-line text-success">[OK] Server nodes initialized.</div>
+                                <div class="log-line text-success">[OK] Port listener 8080 listening.</div>
+                                <div class="log-line text-warning">[WARN] Git commits climbing steadily.</div>
+                                <div class="log-line text-info">[INFO] Energy drinks consumed: 254 liters.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration & Spot Claim Section -->
+        <section id="register" class="register-section">
+            <div class="section-container">
+                <div class="register-layout">
+                    <div class="register-info reveal-on-scroll">
+                        <h2 class="register-heading">READY TO<br><span class="text-glowing">PIX(X)EL?</span></h2>
+                        <p class="register-desc">
+                            Don't let this webathon pass you by. Form your squad, define your goals, and secure your place on the starting grid. Spots are strictly limited.
+                        </p>
+                        
+                        <div class="spot-indicator-box">
+                            <div class="spot-indicator">
+                                <div class="spot-pulse"></div>
+                                <span>88% OF STATIONS ENGAGED</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Registration Action Button Container -->
+                    <div class="register-action reveal-on-scroll">
+                        <div class="register-card">
+                            <div class="card-top-decor"></div>
+                            <h3 class="card-heading">PIXXLEHACK 2.0 PORTAL</h3>
+                            <p class="card-instruction">Click below to claim your developer credentials on Unstop.</p>
+                            
+                            <a href="https://unstop.com/o/wrt0Ppy?lb=8E0WwJqz&utm_medium=Share&utm_source=WhatsApp" target="_blank" rel="noopener noreferrer" class="claim-btn">
+                                <span class="claim-btn-txt">CLAIM YOUR SPOT</span>
+                                <span class="claim-btn-arrow">➔</span>
+                            </a>
+                            
+             <div class="card-footer-spec" style="display: flex !important; align-items: center !important; gap: 10px !important; margin-top: 40px !important;">
+    <h2 style="font-size: 0.85rem !important; margin: 0 !important; color: #AAA898 !important; letter-spacing: 0.05em !important;">POWERED BY:</h2>
+    <img src="unstop-logo.png" alt="Unstop" style="height: 30px !important; width: auto !important; max-width: 120px !important; display: inline-block !important; object-fit: contain !important;">
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-branding">
+                <div class="footer-logo">PIXXELHACK 2.0</div>
+                <p class="footer-credit">Organized by TCET ACM SIGITE. Designed for ultimate web performance.</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="https://tcet.acm.org/"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="social-link"
+   aria-label="Visit TCET ACM website">
+  <i class="fa-solid fa-globe social-icon"></i>
+</a>
+                <a href="https://www.instagram.com/tcet_acm_sigite?igsh=NTJ4MjB5Mzd4NDJ3"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="social-link"
+   aria-label="Follow us on Instagram">
+  <i class="fa-brands fa-instagram social-icon"></i>
+</a>
+                <a href="https://www.linkedin.com/in/acmtcet"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="social-link"
+   aria-label="Connect with us on LinkedIn">
+  <i class="fa-brands fa-linkedin-in social-icon"></i>
+</a>
+
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TCET ACM SIGITE. ALL RIGHTS RESERVED. CODE SAFELY.</p>
+        </div>
+    </footer>
+
+    <!-- Main JS script -->
+    <script src="script.js"></script>
+</body>
+</html>
